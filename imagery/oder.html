@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-TH" oncontextmenu="return false" onmousedown="return false">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?2">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oder</title>
+
+
+    <style>
+        .btn {
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            margin: 4.5px 8px 5px 0;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            float: left;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-color: #ff81c0;
+        }
+
+        .btn.active {
+            background-color: hsl(0, 54%, 30%);
+            color: rgb(255, 60, 60);
+        }
+
+
+        #Click {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .Box {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+            float: left;
+        }
+
+        .Card {
+            position: relative;
+            display: none;
+            height: 250px;
+            width: auto;
+            border-radius: 4px;
+            margin: 1% auto 0 auto;
+            float: left;
+        }
+
+        .Card img {
+            width: auto;
+            height: 100%;
+            display: block;
+        }
+
+        .into {
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 92%;
+            padding-left: 8%;
+            background-color: rgba(0, 0, 0, 0.658);
+            color: white;
+            top: 0;
+        }
+
+        .Card:hover .into {
+            display: block;
+        }
+
+        @media screen and (max-width: 560px) {
+            body {
+                background-color: black;
+            }
+
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            .Box {
+                overflow: hidden;
+                position: none;
+            }
+
+            #Click {
+                padding-left: 8px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .Card {
+                width: 100%;
+                margin: 0px 0;
+                height: auto;
+            }
+
+            .Card img {
+                width: 100%;
+                height: auto;
+            }
+
+            .into {
+                padding-bottom: 8%;
+                position: relative;
+                background-color: black;
+            }
+        }
+
+        .show {
+            display: block;
+        }
+
+        body::-webkit-scrollbar {
+            background-color: hsl(0, 0%, 0%);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 4px 20px 4px 20px;
+            -webkit-box-shadow: inset 3px -2px 3px rgba(0, 0, 0, 0.3);
+            background-image: -webkit-gradient(linear, left bottom, left top,
+                    color-stop(0.44, rgb(122, 153, 217)),
+                    color-stop(0.72, rgb(73, 125, 189)),
+                    color-stop(0.86, rgb(28, 58, 148)));
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="oder.html">Oder</a>
+        <a href="about.html">About</a>
+        <div class="a-on">
+            <a>Language</a>
+            <div class="a-off">
+                <button href="">English</button>
+                <button href="">Thailand</button>
+            </div>
+        </div>
+    </div>
+    <div id="Click">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('Cat')"> Cat</button>
+        <button class="btn" onclick="filterSelection('Dog')"> Dog</button>
+        <button class="btn" onclick="filterSelection('Rabbit')"> Rabbit</button>
+    </div>
+
+
+
+    <div class="Box">
+        <div class="Card Cat"><img src="image/cat-1046544.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com/th/photos/cat-1046544">Alexas Fotos</a><br><br>
+                    Title : Cat <br>
+                    Site : 3359 x 2497 px <br>
+                    DPI : 300 <br>
+                    File : JPG <br>
+                    Base : 2.68 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-1058095.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com/th/photos/cat-1058095">Thomas B.</a><br><br>
+                    Title : Cat <br>
+                    Site : 5206 x 3471 px <br>
+                    DPI : 300 <br>
+                    File : JPG <br>
+                    Base : 3.21 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat Dog"><img src="image/cat-1517642.jpg" alt="Cat & Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com/th/photos/cat-1517642">GiselaFotografie</a><br><br>
+                    Title : Cat & Dog <br>
+                    Site : 1327 x 1992 px <br>
+                    DPI : 300 <br>
+                    File : JPG <br>
+                    Base : 314 KB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-1675422.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-1675422">Alexas Fotos</a><br><br>
+                    Title : Cat <br>
+                    Site : 5792 x 3770 px <br>
+                    DPI : 300 <br>
+                    File : JPG <br>
+                    Base : 6.24 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-1840495.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-1840495">Pexels</a><br><br>
+                    Title : Cat <br>
+                    Site : 4288 x 2848 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.13 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-2178983.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-2178983">Pexels</a><br><br>
+                    Title : Cat <br>
+                    Site : 5184 x 3456 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 4.11 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-2288404.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/kitten-2288404">Bolanu Teslaru Andrei</a><br><br>
+                    Title : Cat <br>
+                    Site : 3888 x 2592 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.18 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-2352163.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-2352163">Iván Tamás</a><br><br>
+                    Title : Cat <br>
+                    Site : 1920 x 1080 px <br>
+                    DPI : 300 <br>
+                    File : JPG <br>
+                    Base : 371 KB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-2762156.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-2762156">Irina kukuts</a><br><br>
+                    Title : Cat <br>
+                    Site : 3800 x 3152 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.27 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-2806957.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-2806957">Alexas Fotos</a><br><br>
+                    Title : Cat <br>
+                    Site : 2556 x 1514 px <br>
+                    DPI : 300 <br>
+                    File : JPG <br>
+                    Base : 1.40 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-3591348.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-3591348">Mabel Amber</a><br><br>
+                    Title : Cat <br>
+                    Site : 3000 x 2002 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.92 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cat-4256821.jpg" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cat-4256821">Annabel P</a><br><br>
+                    Title : Cat <br>
+                    Site : 6000 x 4000 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 6.10 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat"><img src="image/cats-4945658.png" alt="Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/cats-4945658">Briam Cute</a><br><br>
+                    Title : Cat <br>
+                    Site : 3000 x 3750 px <br>
+                    DPI : 300<br>
+                    File : PNG <br>
+                    Base : 1.91 MB
+                </address>
+            </div>
+        </div>
+
+
+
+        <div class="Card Dog"><img src="image/dog-1144641.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-1144641">Pezibear</a><br><br>
+                    Title : Dog <br>
+                    Site : 2000 x 1333 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 309 KB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-1210025.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-1210025">Free Photos</a><br><br>
+                    Title : Dog <br>
+                    Site : 5092 x 3395 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 5.79 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog "><img src="image/dog-1246588.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-1246588">Free Photos</a><br><br>
+                    Title : Dog <br>
+                    Site : 5456 x 3632 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 3.11 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog Cat"><img src="image/dog-1755423.jpg" alt="Dog & Cat">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-1755423">Jupri</a><br><br>
+                    Title : Dog & Cat<br>
+                    Site : 4288 x 2848 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.21 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-1801419.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-1801419">Thomas Geider</a><br><br>
+                    Title : Dog <br>
+                    Site : 3131 x 2264 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.50 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-2187074.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-2187074">ArtTower</a><br><br>
+                    Title : Dog <br>
+                    Site : 4000 x 3000 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.36 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-2561134.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-2561134">StockSnap</a><br><br>
+                    Title : Dog <br>
+                    Site : 5616 x 3744 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 5.73 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-3047194.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-3047194">Elisabetta Bellomi</a><br><br>
+                    Title : Dog <br>
+                    Site : 4742 x 3161 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 3.15 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-3226442.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-3226442">Couleur</a><br><br>
+                    Title : Dog <br>
+                    Site : 4776 x 3186 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.66 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-3301255.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-3301255">Petr Jalový</a><br><br>
+                    Title : Dog <br>
+                    Site : 1920 x 1280 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 383 KB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-4372036.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-4372036">birgl</a><br><br>
+                    Title : Dog <br>
+                    Site : 6000 x 4000 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 6.33 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-4415649.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-4415649">huoadg5888</a><br><br>
+                    Title : Dog <br>
+                    Site : 5130 x 3396 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.99 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Dog"><img src="image/dog-5357794.jpg" alt="Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/dog-5357794">Aleš Háva</a><br><br>
+                    Title : Dog <br>
+                    Site : 6000 x 4000 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 3.84 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Cat Dog"><img src="image/pets-3715733.jpg" alt="Cat & Dog">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/pets-3715733">huoadg5888</a><br><br>
+                    Title : Cat & Dog <br>
+                    Site : 3398 x 2265 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.14 MB
+                </address>
+            </div>
+        </div>
+
+
+
+
+        <div class="Card Rabbit"><img src="image/rabbit-2174679.jpg" alt="Rabbit">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/rabbit-2174679">Rebekka D</a><br><br>
+                    Title : Rabbit <br>
+                    Site : 2992 x 2000 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.20 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Rabbit"><img src="image/rabbit-2174681.jpg" alt="Rabbit">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/rabbit-2174681">Rebekka D</a><br><br>
+                    Title : Rabbit <br>
+                    Site : 2992 x 2000 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.49 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Rabbit"><img src="image/rabbit-2197043.jpg" alt="Rabbit">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/rabbit-2197043">Rebekka D</a><br><br>
+                    Title : Rabbit <br>
+                    Site : 4382 x 2923 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.58 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Rabbit"><img src="image/rabbit-2500929.jpg" alt="Rabbit">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/rabbit-2500929">Mitzi Mandel</a><br><br>
+                    Title : Rabbit <br>
+                    Site : 3504 x 2336 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 1.55 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Rabbit"><img src="image/rabbit-3201433.jpg" alt="Rabbit">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/rabbit-3201433">Sabine Kroschel</a><br><br>
+                    Title : Rabbit <br>
+                    Site : 4928 x 1632 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 2.43 MB
+                </address>
+            </div>
+        </div>
+        <div class="Card Rabbit"><img src="image/rabbit-3578422.jpg" alt="Rabbit">
+            <div class="into">
+                <address><br>
+                    Astist : <a href="https://pixabay.com//th/photos/rabbit-3578422">monikasmigielska</a><br><br>
+                    Title : Rabbit <br>
+                    Site : 5108 x 3405 px <br>
+                    DPI : 300<br>
+                    File : JPG <br>
+                    Base : 932 KB
+                </address>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("Card");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) { if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; } }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) { while (arr1.indexOf(arr2[i]) > -1) { arr1.splice(arr1.indexOf(arr2[i]), 1); } }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("Click");
+        var btns = btnContainer.getElementsByClassName("btn");
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <div id="divF">
+        <footer>&#169 imagery</footer>
+    </div>
+
+
+</body>
+
+</html>
