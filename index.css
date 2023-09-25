@@ -1,0 +1,117 @@
+body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0;min-width: 600px; }
+#message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+#message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px;text-align: center; }
+#message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;text-align: center;}
+#message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+#message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+#message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+#load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+@media (max-width: 600px) {
+    body, #message { margin-top: 0; background: white; box-shadow: none; }
+    body { border-top: 16px solid #ffa100; }
+}
+
+
+
+.Card {
+    float: left;
+    width: 48%;
+    height: 510px;
+    border: 1px solid transparent;
+    perspective: 1000px;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 1% 0 0.2% 1.7%;
+  }
+  .Card-inner img{width: 100%;}
+  .Card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  .Card:hover .Card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .Card-front, .Card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: rgb(31, 31, 31);
+  }
+  
+  .Card-back {
+    transform: rotateY(180deg);
+  }
+  
+  * {box-sizing: border-box}
+  
+  .container {
+    width: inherit;height: 54%;
+  }
+  .sk {
+    background-color: rgb(250, 250, 250);
+    border-radius: 8px;
+  }
+  .skills {
+    text-align: right;
+    padding: 10px;
+    border-radius: 7px;
+  }
+  .container img{
+    height: 100%;
+  }
+
+  @media screen and (max-width: 620px) {
+    body{
+        background-color: black;
+    }
+    .Card {
+    width: 48%;
+    height: 500px;
+  }
+    .Card-front, .Card-back {
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+    }
+    .sk {
+      background-color: rgb(5, 5, 5);
+    }
+  }
+  @media screen and (min-width: 740px) {
+    .Card {
+    height: 540px;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .Card {
+    width: 32.99%;
+    height: 450px;
+    margin: 1% 0 0.2% 0.3%;
+    }
+  }
+  @media screen and (min-width: 1090px) {
+    .Card {
+    height: 530px;
+    }
+  }
+  @media screen and (min-width: 1260px) {
+    .Card {
+    width: 23.8%;
+    height: 460px;
+    }
+  }
+  @media screen and (min-width: 1480px) {
+    .Card {
+    height: 530px;
+    }
+  }
