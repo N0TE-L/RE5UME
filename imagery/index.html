@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-TH" oncontextmenu="return false" onmousedown="return false">
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagery</title>
+    <style>
+        body {
+            background-image: url(image/pets-3715733.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #bn1 {
+            background-image: url(image//0/cat.png);transition: 2s;
+        }
+        #bn2 {
+            background-image: url(image//0/dog.png);transition: 2s;
+        }
+        #bn1:hover {
+            opacity: 1;
+            border: 10px outset white;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.37);
+        }
+        #bn2:hover {
+            opacity: 1;
+            box-shadow: 10px 10px darkorange;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.322);
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                background-image: url(image/cats-4945658.png);
+                background-position-y: 0;
+            }
+        }
+        b { 
+            color: rgb(255, 58, 58);
+            opacity: 1;
+        }
+        .a1 {
+            text-decoration: none;
+            color: rgb(255, 0, 0);
+            opacity: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="dT" class="blockTH">
+        สวัสดี
+    </div>
+    <div id="dE" class="blockEN">
+        Hello~
+    </div>
+    <div id="TH" class="dindex">
+        <a class="a1" href="home.html" style="padding: 12px;"><button title="คลิกเพื่อเข้าสู่หน้าเว็บ ภาษาไทย" class="bindex" id="bn1" onclick="aadTH()">
+            ไทย
+        </button></a>
+    </div>
+    <div id="EN" class="dindex"><a class="a1" href="home.html">
+        <button title="Wecome to Engling language Website" class="bindex" id="bn2" onclick="aadED()">
+            Engling
+        </button></a>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
