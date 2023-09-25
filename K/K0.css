@@ -1,0 +1,20 @@
+body              {margin: 0;min-width: 1000px;}
+#div3             {position: relative;width: 100%;height: 700px;overflow: hidden;margin-top: -4px;}
+#img1, #img2      {top: 0;left: 0;width: 100%;height: auto;z-index: -1;}
+#k0               {top: 0;left: 0;width: 100%;height: 100%;z-index: -1;opacity: 0.5;}
+#b1               {bottom: 0;}
+.b                {width: 100%;height: 350px;z-index: -1;}
+.o                {width: 60%;height: auto;}
+#div4             {bottom: 6%;left: 4%;}
+#div5             {top: 6%;right: -10%;}
+#img2             {opacity: 0.5;}
+#div2             {display: none;}
+#div1:hover #div2 {display: block;}
+#logo             {position: fixed;bottom: 20px;right: 20px;z-index: 1;width: 200px;height: auto;}
+#div6             {bottom: 30%;left: 300px;padding: 10px;}
+#div7             {top: 30%;right: 500px;padding: 10px;}
+#div6, #div7      {background: rgba(0, 0, 0, 0.8);font-size: 16px;color: white;}
+#div8             {display: none;}
+#div3:hover #div8 {display: block;}
+#div3:hover .b    {display: none;}
+#img1, #div4, #div5, #div6, #div7, #div8,.b {position: absolute;z-index: 0;}
